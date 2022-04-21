@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.7857d077.css",
-    "main.js": "/static/js/main.d3a4c8ab.js",
-    "static/js/787.72f94a41.chunk.js": "/static/js/787.72f94a41.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.91f0fdad0f09dc0b1cf938cc9b05b0a2.svg",
-    "index.html": "/index.html",
-    "main.7857d077.css.map": "/static/css/main.7857d077.css.map",
-    "main.d3a4c8ab.js.map": "/static/js/main.d3a4c8ab.js.map",
-    "787.72f94a41.chunk.js.map": "/static/js/787.72f94a41.chunk.js.map"
+    "main.css": "/reactCommerce/static/css/main.7857d077.css",
+    "main.js": "/reactCommerce/static/js/main.63482d1e.js",
+    "static/js/787.72f94a41.chunk.js": "/reactCommerce/static/js/787.72f94a41.chunk.js",
+    "static/media/logo.svg": "/reactCommerce/static/media/logo.91f0fdad0f09dc0b1cf938cc9b05b0a2.svg",
+    "index.html": "/reactCommerce/index.html",
+    "main.7857d077.css.map": "/reactCommerce/static/css/main.7857d077.css.map",
+    "main.63482d1e.js.map": "/reactCommerce/static/js/main.63482d1e.js.map",
+    "787.72f94a41.chunk.js.map": "/reactCommerce/static/js/787.72f94a41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7857d077.css",
-    "static/js/main.d3a4c8ab.js"
+    "static/js/main.63482d1e.js"
   ]
 }
