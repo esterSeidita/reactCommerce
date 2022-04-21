@@ -10,15 +10,17 @@ const wordToUpper = (text) => {
     return result;
 }
 
-export const Sidebar = () =>{ 
+export const Sidebar = ({filterCategory}) =>{ 
 
     const [categories, setCategories] = useState([]);
     const [ display, setDisplay ] = useState( 'none' );
     const [ toggle, setToggle ] = useState( 'open' );
+    const [ focus, setFocus ] = useState(0);
 
     const getCategories = async() => {
         const response = await fetch("https://fakestoreapi.com/products/categories");
         const data = await response.json();
+        data.unshift("Everything");
         setCategories(data);
     }
 
@@ -29,6 +31,11 @@ export const Sidebar = () =>{
 
     useEffect(() => {getCategories()}, []);
 
+    const categorySelector = (category, index) => {
+        filterCategory(category);
+        setFocus(index);
+    }
+
     return (
         <>
             <nav className="dropdown" onClick={openMenu}>
@@ -37,7 +44,7 @@ export const Sidebar = () =>{
                     <span className="navToggle" id={toggle}></span>
                 </div>
                 <ul className="navList" style={{display:display}}>
-                    {categories.map((element, index) => <li key={index}>{wordToUpper(element)}</li>)}
+                    {categories.map((element, index) => <li onClick = {(e) => categorySelector(element)} key={index}>{wordToUpper(element)}</li>)}
                 </ul>
             </nav>
             <aside >
@@ -46,7 +53,7 @@ export const Sidebar = () =>{
                     <hr/>
                 </div>
                 <ul className="navList">
-                    {categories.map((element, index) => <li key={index}>{wordToUpper(element)}</li>)}
+                    {categories.map((element, index) => <li className={focus===index ? "active" : ""} onClick = {(e) => {categorySelector(element, index); setFocus(index)}} key={index}>{wordToUpper(element)}</li>)}
                 </ul>
             </aside>
         </>

@@ -22,6 +22,7 @@ header button{
     padding: 0.8em;
     border-radius: 0 0.5em 0.5em 0;
     font-weight: bold;
+    cursor: pointer;
 }
 
 header form{

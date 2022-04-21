@@ -2,15 +2,22 @@ import './App.css';
 import {Header} from './components/Header';
 import {MainProducts} from './components/MainProducts';
 import {Sidebar} from './components/Sidebar';
+import {useState} from "react";
+import {Footer} from './components/Footer';
 
 function App() {
+
+  const [category, setCategory] = useState("");
+  const [searchInput, setSearchInput] = useState("");
+  
   return (
     <div className="App">
-      <Header/>
+      <Header inputTransfer = {setSearchInput}/>
     <div className='main'>
-      <Sidebar/>
-      <MainProducts/>
+      <Sidebar filterCategory={setCategory}/>
+      <MainProducts category={category} searchInput = {searchInput}/>
     </div>
+    <Footer/>
     </div>
   );
 }

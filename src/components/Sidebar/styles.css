@@ -61,7 +61,6 @@ aside{
         height: 100vh; 
         position: fixed;
         width: 100%;
-        z-index: -1;
         padding: 6em 2em 0 2em;
         display: block !important;
         clip-path: circle(40% at -5% 40%);
@@ -92,7 +91,13 @@ aside{
     aside ul li{
         display: block !important;
         list-style-type:none;
-        cursor: pointer;
+        cursor: pointer !important;
         padding: 0.8em 0;
+        width: 50px;
+
+    }
+    aside ul li.active{
+        border-bottom: 2px solid white;
+        font-weight: bold;
     }
 }

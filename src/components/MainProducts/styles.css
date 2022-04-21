@@ -4,6 +4,13 @@
     justify-content: space-around;
 }
 
+.noElementWarning{
+    padding: 1em;
+    text-align: center;
+    font-family: var(--titlesFont);
+    font-size: 2rem;
+}
+
 
 @media all and (min-width:700px){
     .productsWrapper{

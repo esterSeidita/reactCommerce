@@ -1,0 +1,7 @@
+footer{
+    background-color: var(--mainColor);
+    color: aliceblue;
+    padding: 2em;
+    text-align: center;
+    font-family: var(--titlesFont);
+}
