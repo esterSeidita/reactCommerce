@@ -1,0 +1,68 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    background-color: var(--bgColor);
+    position:sticky;
+    width: 100vw;
+    padding: 1em;
+}
+
+header input{
+    padding: 0.8em;
+    border: none;
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+header button{
+    background-color: var(--mainColor);
+    border: none;
+    color: aliceblue;
+    padding: 0.8em;
+    border-radius: 0 0.5em 0.5em 0;
+    font-weight: bold;
+}
+
+header form{
+    margin: 0 auto;
+}
+
+.logo-wrap img{
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-wrap h1{
+    color: var(--mainColor);
+    font-family: var(--titlesFont);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+@media all and (min-width:700px){
+    header{
+        flex-flow: row;
+        width: 100%;
+        padding: 0;
+        position:fixed;
+        z-index: 1;
+        height: 5em;
+    }
+
+    header input {
+        width: 350px;
+    }
+
+    .logo-wrap{
+        display: flex; 
+        flex-wrap: wrap;
+    }
+
+    .logo-wrap h1{
+        font-size: 1.8rem;
+        align-self: center;
+    }
+}

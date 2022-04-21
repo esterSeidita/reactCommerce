@@ -1,0 +1,98 @@
+
+
+.navHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    color: aliceblue;
+    height: 40px;
+    padding: 1em;
+    background-color: var(--mainColor);
+    font-size: 0.8rem;
+}
+
+nav ul{
+    margin: 0; padding: 0;
+    background-color: var(--bgColor);
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+nav ul li{
+    list-style-type:none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8em;
+    border-bottom: 3px solid rgba(234, 189, 189, 0.283); 
+    border-top: 3px solid rgba(255, 255, 255, 0.605);
+}
+
+aside{
+    display: none !important;
+}
+
+.navToggle::before{
+    content: "|||";
+    font-size: 1.5rem;
+}
+
+.navToggle{
+    transform: rotate(90deg);
+}
+
+.navToggle#close::before{
+    content:"x";
+}
+
+.dropdown{
+    cursor: pointer;
+    text-align: center;
+}
+
+@media all and (min-width:700px){
+    .dropdown{
+        display: none !important;
+    }
+
+    aside{
+        background-color: var(--mainColor);
+        color: aliceblue;
+        height: 100vh; 
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+        padding: 6em 2em 0 2em;
+        display: block !important;
+        clip-path: circle(40% at -5% 40%);
+    }
+
+    aside hr{
+        width: 30px;
+        display: block;
+        margin: 0;
+        height: 0.4em;
+        background-color: aliceblue;
+        position: relative; bottom: 2px;
+        border-radius: 2em;
+    }
+
+    aside h2{
+        margin: 0;
+    }
+
+    .asideHeader{
+        margin-top: 15px;
+    }
+
+    aside ul{
+        padding: 0;
+    }
+
+    aside ul li{
+        display: block !important;
+        list-style-type:none;
+        cursor: pointer;
+        padding: 0.8em 0;
+    }
+}
