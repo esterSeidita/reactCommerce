@@ -1,7 +1,9 @@
 footer{
     background-color: var(--mainColor);
     color: aliceblue;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
     font-family: var(--titlesFont);
+    width: 100vw;
+    margin-top: 40px;
 }

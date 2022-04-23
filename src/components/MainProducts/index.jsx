@@ -30,7 +30,7 @@ export const MainProducts = ({category, searchInput}) => {
 
   return <div className="productsWrapper">
       {
-        productsFiltered.length === 0 ? <p className="noElementWarning">I'm sorry! I didn't find any product &#128532;</p> : productsFiltered.map((product, index) => <Product key={index} img={product.image} title={product.title} price={product.price}/>)
+        productsFiltered.length === 0 ? <div className="noElementWarning">I'm sorry! I didn't find any product &#128532;</div> : productsFiltered.map((product, index) => <Product key={index} img={product.image} title={product.title} price={product.price}/>)
       }
   </div>;
 };
