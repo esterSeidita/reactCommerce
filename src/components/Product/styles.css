@@ -1,17 +1,18 @@
 .product img{
     width: 100%;
-    height: 150px;
+    height: 250px;
     object-fit: cover;
     border-radius: 2em 2em 0 0;
 }
 
 .product{
-    margin: 2em;
+    margin: 20px 0;
     border-radius: 2em;
-    box-shadow: 10px 10px 15px 0px var(--bgColor);
-    width: 100%;
+    /* box-shadow: 10px 10px 15px 0px var(--bgColor); */
+    width: 90%;
     max-height: 350px;
     background-color: white;
+    z-index: 1;
 }
 
 .productInfo{
@@ -23,8 +24,9 @@
 }
 
 
-@media all and (min-width:700px){
+@media all and (min-width:470px){
     .product{
         max-width: 200px;
+        width: 100%;
     }
 }

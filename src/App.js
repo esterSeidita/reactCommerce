@@ -3,7 +3,6 @@ import {Header} from './components/Header';
 import {MainProducts} from './components/MainProducts';
 import {Sidebar} from './components/Sidebar';
 import {useState} from "react";
-import {Footer} from './components/Footer';
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
       <Sidebar filterCategory={setCategory}/>
       <MainProducts category={category} searchInput = {searchInput}/>
     </div>
-    <Footer/>
     </div>
   );
 }

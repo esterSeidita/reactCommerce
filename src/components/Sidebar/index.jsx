@@ -53,7 +53,7 @@ export const Sidebar = ({filterCategory}) =>{
                     <hr/>
                 </div>
                 <ul className="navList">
-                    {categories.map((element, index) => <li className={focus===index ? "active" : ""} onClick = {(e) => {categorySelector(element, index); setFocus(index)}} key={index}>{wordToUpper(element)}</li>)}
+                    {categories.map((element, index) => <li className={focus===index ? "active" : ""} onClick = {(e) => {categorySelector(element, index)  }} key={index}>{wordToUpper(element)}</li>)}
                 </ul>
             </aside>
         </>

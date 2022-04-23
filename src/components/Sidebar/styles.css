@@ -60,10 +60,10 @@ aside{
         color: aliceblue;
         height: 100vh; 
         position: fixed;
-        width: 100%;
+        width: 260px;
         padding: 6em 2em 0 2em;
         display: block !important;
-        clip-path: circle(40% at -5% 40%);
+        clip-path: circle(49% at -5% 40%);
     }
 
     aside hr{
