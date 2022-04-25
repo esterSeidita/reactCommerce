@@ -6,16 +6,37 @@
 }
 
 .product{
-    margin: 20px 0;
+    margin: 40px 0;
     border-radius: 2em;
     width: 90%;
-    max-height: 350px;
     background-color: white;
     z-index: -1;
+    max-height: 450px;
+    position: relative;
+}
+
+.product button{
+    background-color: var(--mainColor);
+    padding: 1em;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    line-height: 20px;
+}
+
+
+.product button .icons{
+    margin:0;
+    padding: 0;
+    vertical-align: middle;
 }
 
 .productInfo{
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .productInfo h2{
@@ -32,8 +53,13 @@
 
 @media all and (min-width:1000px){
     .product{
-        margin: 10px;
         z-index: 1;
+        margin: 30px;
+        height: 650px;
 
+    }
+
+    .product button{
+        bottom: 0px;
     }
 }

@@ -54,6 +54,7 @@ header button{
 .icons{
     margin: 10px;
     font-size: 2em;
+    cursor: pointer;
 }
 
 @media all and (min-width:700px){
@@ -68,7 +69,7 @@ header button{
     }
 
     header input {
-        width: 40vw;
+        width: 37vw;
     }
 
     .logo-wrap{
