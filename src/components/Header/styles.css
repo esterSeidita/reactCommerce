@@ -26,10 +26,6 @@ header button{
     cursor: pointer;
 }
 
-header form{
-    /* max-width: 70%; */
-}
-
 .logo-wrap img{
     width: 80px;
     display: block;
@@ -63,6 +59,7 @@ header form{
 @media all and (min-width:700px){
     header{
         flex-flow: row;
+        justify-content: space-between;
         width: 100%;
         padding: 0;
         position:fixed;
@@ -71,16 +68,29 @@ header form{
     }
 
     header input {
-        width: 350px;
+        width: 40vw;
     }
 
     .logo-wrap{
         display: flex; 
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .logo-wrap h1{
         font-size: 1.8rem;
         align-self: center;
+        justify-self: center;
     }
+
+    .iconsWrapper{
+        position:static;
+        background-color: var(--bgColor);
+        text-align: center;
+        justify-content:unset;
+    }
+
+    .iconsWrapper form{
+        flex-grow: 1;
+    }
+
 }
