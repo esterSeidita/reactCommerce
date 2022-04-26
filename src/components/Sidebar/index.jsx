@@ -22,6 +22,7 @@ export const Sidebar = ({filterCategory}) =>{
         const data = await response.json();
         data.unshift("Everything");
         setCategories(data);
+        localStorage.setItem("categories", JSON.stringify(data));
     }
 
     const openMenu = () => {        

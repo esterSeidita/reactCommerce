@@ -2,9 +2,10 @@ import "./styles.css";
 import { useState, useEffect } from "react";
 import {Product} from "../Product";
 
-export const MainProducts = ({category, searchInput}) => {
+export const MainProducts = ({setProductInCart, category, searchInput}) => {
   const [products, setProducts] = useState([]);
   const [productsFiltered, setProductsFiltered] = useState([]);
+  const [productToCart, setProductToCart] = useState([]);
 
   const getProducts = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
@@ -27,10 +28,15 @@ export const MainProducts = ({category, searchInput}) => {
     setProductsFiltered(filtered);
   }, [searchInput])
 
+  
+  useEffect(() => {
+    setProductInCart(productToCart);
+  }, [productToCart])
+
 
   return <div className="productsWrapper">
       {
-        productsFiltered.length === 0 ? <div className="noElementWarning">I'm sorry! I didn't find any product &#128532;</div> : productsFiltered.map((product, index) => <Product key={index} img={product.image} title={product.title} price={product.price}/>)
+        productsFiltered.length === 0 ? <div className="noElementWarning">I'm sorry! I didn't find any product &#128532;</div> : productsFiltered.map((product, index) => <Product key={index} setProductToCart={setProductToCart} img={product.image} title={product.title} price={product.price} index={product.id}/>)
       }
   </div>;
 };

@@ -48,6 +48,7 @@ header button{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 455 !important;
     padding: 10px;
 }
 
