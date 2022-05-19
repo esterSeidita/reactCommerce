@@ -1,14 +1,12 @@
 import "./styles.css";
 import {FaCartPlus} from "react-icons/fa"
 import { IconContext } from "react-icons";
-import {useState} from "react";
 
 
-export const Product = ({setProductToCart, title, img, price, index}) => {
+export const Product = ({addProductsInCart, title, img, price, index}) => {
 
-  const addToCart = (e) =>{
-    const id = e.target.id;
-    setProductToCart(id);
+  const addToCart = () =>{
+    addProductsInCart(index);
   }
 
   return (  
@@ -19,7 +17,7 @@ export const Product = ({setProductToCart, title, img, price, index}) => {
         <p>{price}€</p>
       </div>
         <IconContext.Provider value={{ color: "var(--bgColor)", className: "icons" }}>
-          <button onClick={addToCart} id={index}>Add <FaCartPlus/></button>
+          <button onClick={addToCart}>Add <FaCartPlus/></button>
         </IconContext.Provider>
   </div>
   )

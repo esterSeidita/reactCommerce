@@ -9,14 +9,14 @@ function App() {
 
   const [category, setCategory] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const [productInCart, setProductInCart] = useState([]);
+  const [cartProducts, setCartProduct] = useState([]);
   
   return (
     <div className="App">
-      <Header inputTransfer = {setSearchInput}/>
+      <Header cartProducts={cartProducts} inputTransfer = {setSearchInput}/>
     <div className='main'>
       <Sidebar filterCategory={setCategory}/>
-      <MainProducts setProductInCart={setProductInCart} category={category} searchInput = {searchInput}/>
+      <MainProducts setCartProduct={setCartProduct} category={category} searchInput = {searchInput}/>
       <Footer/>
     </div>
     </div>

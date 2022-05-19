@@ -7,6 +7,7 @@ header{
     position:sticky;
     width: 100vw;
     padding: 1em;
+    z-index: 1;
 }
 
 header input{
@@ -48,14 +49,40 @@ header button{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 455 !important;
-    padding: 10px;
+    padding: 5px;
+    color: var(--mainColor);
 }
 
-.icons{
+.iconsWrapper>div{
     margin: 10px;
     font-size: 2em;
     cursor: pointer;
+}
+
+.searchBtn{
+    color: var(--bgColor)
+}
+.iconsWrap{
+    display: flex;
+    gap:20px;
+}
+
+.CartIconWrapper{
+    position: relative;
+}
+
+.CartNumber{
+    position: absolute;
+    top: -10px;
+    right: -18px;
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    color: aliceblue;
+    border-radius: 50%;   
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 @media all and (min-width:700px){
@@ -76,6 +103,7 @@ header button{
     .logo-wrap{
         display: flex; 
         flex-wrap: nowrap;
+
     }
 
     .logo-wrap h1{
